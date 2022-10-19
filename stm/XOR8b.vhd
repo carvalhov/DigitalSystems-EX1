@@ -11,3 +11,8 @@ port(
      S4          : out std_logic_vector(7 downto 0) 
 );
 end XOR8b;
+     
+architecture Behavioral of XOR8b is
+
+  
+end Behavioral;
