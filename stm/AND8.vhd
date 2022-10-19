@@ -7,8 +7,14 @@ port(
      EntA, EntB : in std_logic_vector(7 downto 0);
      -- Port Outputs
      -- S0 é a saída de Op_Code 00 
-     S0          : out std_logic_vector(7 downto 0); 
+     S0          : out std_logic_vector(7 downto 0) 
 );
+     
 end AND8b;
+
+architecture Behavioral of AND8b is
+
+  
+end Behavioral;
   
 
