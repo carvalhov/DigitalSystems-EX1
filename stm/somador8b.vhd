@@ -12,3 +12,8 @@ port(
      cout         : in std_logic
 );
 end somador8b;
+
+architecture Behavioral of somador8b is
+
+  
+end Behavioral;
