@@ -16,5 +16,6 @@ port(
     S:     out std_logic_vector(7 downto 0)
 
 );
-
+end exercicio1;
+	
 architecture behavioral of exercicio1 is
