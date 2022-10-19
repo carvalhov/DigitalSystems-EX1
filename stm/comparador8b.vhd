@@ -7,7 +7,7 @@ port (
       clock     : in std_logic; 
       EntA,EntB : in std_logic_vector(7 downto 0); 
       -- Port Output
-      Output    : out std_logic -- Output = 0 when A = B 
+      Output    : out std_logic -- Output = 1 when A >= B else 0
  );
 end comparador8b;
   
