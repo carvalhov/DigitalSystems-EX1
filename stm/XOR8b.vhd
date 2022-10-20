@@ -13,6 +13,11 @@ port(
 end XOR8b;
      
 architecture Behavioral of XOR8b is
-
+     
+     -- Usar função map?
+     -- Esquema lógico 
+     -- S0[0] <= A[0] xor B[0];
+     -- S0[1] <= A[1] xor B[1]; 
+     -- idem ...
   
 end Behavioral;
