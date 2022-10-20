@@ -13,7 +13,12 @@ port(
 end AND8b;
 
 architecture Behavioral of AND8b is
-
+     
+     -- Usar função map?
+     -- Esquema lógico 
+     -- S0[0] <= A[0] & B[0];
+     -- S0[1] <= A[1] & B[1]; 
+     -- idem ...
   
 end Behavioral;
   
