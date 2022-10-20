@@ -18,7 +18,7 @@ end mux2x1;
   
 architecture behaviour of mux2x1 is
 begin
-  process (w0, w1, s)
+  process (S3_1, S3_2, S3)
   begin
     if switch = ‘0’ then
       S3 <= S3_1;
