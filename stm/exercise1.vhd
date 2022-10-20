@@ -21,4 +21,4 @@ end exercicio1;
 architecture behavioral of exercicio1 is
 	
 	
-end Behavioral;
+end behavioral;
