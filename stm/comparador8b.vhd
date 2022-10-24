@@ -15,10 +15,11 @@ architecture Behavioral of comparador8b is
       signal: result     : std_logic;
 begin
       process(A, B)
-      IF (A>B or A=B) THEN  -- AgB: A greater than B;    AeB: A equal B;  
-                  result <= '1'
-      ELSE (A<B) THEN        -- AlB: A lesser than B.
-                  result <= '0'     
-      END IF;
-    s <= result
+            IF (A>B or A=B) THEN  -- AgB: A greater than B;    AeB: A equal B;  
+                        result <= '1';
+            ELSE (A<B) THEN        -- AlB: A lesser than B.
+                        result <= '0';     
+            END IF;
+            s <= result;
+      end process;
 end Behavioral;
