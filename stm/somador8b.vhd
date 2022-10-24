@@ -15,8 +15,8 @@ end somador;
 
 architecture Behavioral of somador is
    begin  
-     S <= (X xor Y xor Cin);
-     Cout <= (X and Y) or (X and Cin) or (Y and Cin);  
+     S <= (A xor B xor cin);
+     cout <= (A and B) or (A and cin) or (B and cin);  
 end Behavioral;
 
 
