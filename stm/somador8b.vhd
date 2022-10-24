@@ -49,7 +49,7 @@ architecture Behavioral of somador8b is
           sum          : Out std_logic;
           cout         : in std_logic
      );
-     end somador;
+     end component;
      begin
           a0:somador port map (A(0),B(0),cin,sum(0),carry(0));
           a1:somador port map (A(1),B(1),cary(0),sum(1),carry(1));
