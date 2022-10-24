@@ -6,12 +6,12 @@ entity ALU is
   port
  (
 	  -- Input ports
-    A, B    : in  STD_LOGIC_VECTOR(7 downto 0);
-	  ALU_Sel	: in std_logic_vector(2 downto 0);
+    A, B        : in  STD_LOGIC_VECTOR(7 downto 0);
+    ALU_Sel	: in std_logic_vector(2 downto 0);
 		
     -- Output ports
     ALU_OUT	: out STD_LOGIC_VECTOR(7 downto 0);
-    Carryout : out std_logic  -- Carryout flag
+    Carryout    : out std_logic  -- Carryout flag
 );
 end ALU;
 architecture Behavioral of ALU is  
