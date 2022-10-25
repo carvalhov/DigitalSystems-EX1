@@ -1,16 +1,16 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity comparador8b is
+entity comparador_8b is
 port (
       -- Port inputs
       A, B               : in std_logic_vector(7 downto 0); 
       -- Port Output
       S    : out std_logic -- Output = 1 when A >= B else 0
  );
-end comparador8b;
+end comparador_8b;
   
-architecture Behavioral of comparador8b is
+architecture Behavioral of comparador_8b is
 begin
       process(A, B)
 			begin
