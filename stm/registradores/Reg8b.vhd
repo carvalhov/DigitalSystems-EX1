@@ -8,6 +8,7 @@ port(
 		-- Input Ports 
     clk     : in std_logic;
 	 reset   : in std_logic;
+	 ld      : in std_logic;
     X       : in std_logic_vector(7 downto 0);       
 
 		-- Output Ports
@@ -22,7 +23,7 @@ begin
 		begin
 			if (reset = '1') then 
 				Y <= Null ;
-			elsif(risind_edge(clk) and ld = '1')
+			elsif(rising_edge(clk) and ld = '1') then
 				Y <= X ;	
 			end if;
 	end process;
