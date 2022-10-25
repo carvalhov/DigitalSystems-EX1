@@ -10,15 +10,13 @@ entity ALU is
     ALU_Sel	: in std_logic_vector(2 downto 0);
 		
     -- Output ports
-    ALU_OUT	: out STD_LOGIC_VECTOR(7 downto 0);
-    Carryout    : out std_logic  -- Carryout flag
+    ALU_OUT	: out STD_LOGIC_VECTOR(7 downto 0)
 );
 end ALU;
 
 architecture Behavioral of ALU is  
   
 signal ALU_Result : std_logic_vector (7 downto 0);
-signal tmp: std_logic_vector (8 downto 0);
 
  begin
     process(A, B, ALU_Sel)
@@ -43,7 +41,5 @@ signal tmp: std_logic_vector (8 downto 0);
 			  end case;
 
 			ALU_Out <= ALU_Result; -- ALU out
-			tmp <= ('0' & A) + ('0' & B);
-			Carryout <= tmp(8); -- Carryout flag
    end process;
 end Behavioral;       
