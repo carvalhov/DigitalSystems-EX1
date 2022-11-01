@@ -8,7 +8,7 @@ port(
 
 		-- Input Ports 
     clk    : in std_logic;
-    reset  : in std_logic;
+    reset  : in std_logic; -- Pode ser condiserado o Clear: tranformar em um load/clear no controlador
     OpCode : in std_logic_vector(1 downto 0);  
     Ent_A  : in std_logic_vector(7 downto 0);       
     Ent_B  : in std_logic_vector(7 downto 0); 
@@ -22,7 +22,8 @@ port(
 end datapath;
 	
 architecture behavioral of datapath is
-	
+   signal A       : std_logic_vector (7 downto 0);
+   signal B       : std_logic_vector (7 downto 0);
 COMPONENT ALU
   port
  (
@@ -67,6 +68,29 @@ port (
       S      : out std_logic -- Output = 1 when A >= B else 0
 );
 end COMPONENT comparador_8b;	
-	
-	
+BEGIN
+  RegistradorA: Reg8b 
+	portmap (
+		clk => Clk;
+		X => Ent_A;
+		Y => A;
+		);
+  RegistradorB: Reg8b 
+	  portmap (
+		clk => Clk;
+		X => Ent_B;
+		Y => B;	
+	  	);
+  Control_opcode: Reg2b 
+	  portmap (
+	 	clk => clk;
+	  	X => Opcode;
+	  	Y => Op;
+		);
+  comparadorAB: comparador_8b;
+	  portmap(
+	  	A => A;
+		B => B;
+		S => Result;
+	  	);
 end behavioral;
