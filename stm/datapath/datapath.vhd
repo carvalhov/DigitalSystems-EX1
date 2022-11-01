@@ -16,7 +16,7 @@ port(
 		-- Output Ports
     Op     : out std_logic_vector(1 downto 0);  -- Saída do Registrador de OpCode para o controlador
     result : out std_logic;                     -- Resultado do comparador
-    Saída  : out std_logic_vector(7 downto 0)   -- Saída da ALU
+    Saida  : out std_logic_vector(7 downto 0)   -- Saída da ALU
 
 );
 end datapath;
@@ -73,24 +73,27 @@ BEGIN
 	portmap (
 		clk => Clk;
 		X => Ent_A;
-		Y => A;
-		);
+		Y => A);
   RegistradorB: Reg8b 
 	  portmap (
 		clk => Clk;
 		X => Ent_B;
-		Y => B;	
-	  	);
+		Y => B);
   Control_opcode: Reg2b 
 	  portmap (
 	 	clk => clk;
 	  	X => Opcode;
-	  	Y => Op;
-		);
-  comparadorAB: comparador_8b;
+	  	Y => Op);
+  comparadorAB: comparador_8b
 	  portmap(
 	  	A => A;
 		B => B;
-		S => Result;
-	  	);
+		S => Result);
+  ALU: ALU
+	  portmap(
+		A => A;
+		B => B;
+		ALU_Sel => ;-- Criar um sinal do controlador?
+		ALu_OUT => Saida);
+
 end behavioral;
